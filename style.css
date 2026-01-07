@@ -5,7 +5,7 @@
 body{
     padding: 0;
     margin: 0;
-    background: #eef1f1;
+    background: #28dbdb;
 }
 /* TOP BAR */
 .top-bar {
@@ -41,7 +41,7 @@ body{
 .name{
     color: #f7f6f6;
     font-size: xx-large;
-    padding-right: 1000px;
+    
 }
 
 .banner-wrapper {
@@ -101,9 +101,18 @@ body{
   display: block;
 }
 .below-banner{
+    position: absolute;
     text-align: center;
     padding: 25px;
-    background: #e8f3f3;
+    background: #03C03C;
+    backdrop-filter: blur(6px);
+    width: 25%;
+    margin: 0 auto;
+    display: flex;
+    margin-bottom: 150px;
+    margin-left: 260px;
+    border-radius: 25px;
+    
 }
 .upcoming-content {
   bottom: 10%;
@@ -122,14 +131,15 @@ body{
     
     font-size: 28px;
     font-weight: bold;
-    color: #bc09f3;
+    color: #f3f5f8;
     margin-bottom: 15px;
     text-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
 .Book-now-btn {
   padding: 12px 30px;
-  background: #ffb300;
-  color: #000;
+  margin-left: 15px;
+  background: #F97316;
+  color: #FFFFFF;
   font-size: 18px;
   text-decoration: none;
   border-radius: 5px;
