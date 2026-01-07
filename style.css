@@ -1,0 +1,373 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background: #eef1f1;
+}
+/* TOP BAR */
+.top-bar {
+    width:auto;
+    display: flex;
+    justify-content: space-between; /* left & right */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1f2a7a;   /* blue */
+}
+.splash{
+    width: 150px;
+    height: 150px;
+    margin-top: 100px;
+    margin-left: 450px;
+}
+.splash-logo{
+  display: flex;  
+}
+/* LOGO */
+.logo img {
+    height: 40px;
+    background-color: white;
+}
+
+/* LOGIN */
+.login a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+.name{
+    color: #fff;
+    font-size: xx-large;
+}
+
+.banner-wrapper {
+    width: 100%;
+    height: 260px;
+    display: flex;
+}
+
+/* COMMON BANNER */
+.banner {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* LEFT & RIGHT SIZE */
+.left-banner {
+    width: 50%;
+    overflow: hidden;
+    
+}
+
+.right-banner {
+    width: 50%;
+}
+
+/* IMAGE FIT */
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;   
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .banner-wrapper {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .left-banner,
+    .right-banner {
+        width: 50%;
+        height: auto;
+    }
+}
+
+.upcoming-banner {
+  position: relative;
+  width: 100%;
+}
+
+.upcoming-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.below-banner{
+    text-align: center;
+    padding: 25px;
+    background: #e8f3f3;
+}
+.upcoming-content {
+  bottom: 10%;
+  left: 8%;
+  z-index: 5;
+  color: rgb(226, 12, 12);
+}
+.upcoming-below{
+    position: relative;
+    display: block;
+    font-size: 26px;
+    align-items: center;
+    text-align: center;
+}
+.soon-text{
+    
+    font-size: 28px;
+    font-weight: bold;
+    color: #bc09f3;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.Book-now-btn {
+  padding: 12px 30px;
+  background: #ffb300;
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+.Book-now-btn:hover{
+    background: #ffc107;
+    transform:  scale(1 .05);
+}
+@media (max-width: 600px) {
+  .soon-text {
+    font-size: 20px;
+  }
+
+  .book-now-btn {
+    font-size: 20px;
+    padding: 10px 20px;
+    min-width: 140px;
+    
+  }
+}
+/* SLIDER */
+.slider{
+    width: 60%;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+    .slider-wrapper{
+        flex-direction: column;
+    }
+    .slider{
+        width: 100%;
+    }
+    .info-box{
+        width: 100%;
+    }
+}
+
+/* =====================
+   SLIDER
+===================== */
+.slider {
+    width: 100%;
+    max-width: 1200px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+/* SLIDE IMAGE */
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    
+}
+
+/* ACTIVE SLIDE */
+.slide.active {
+    opacity: 1;
+}
+a {
+    text-decoration: none;
+}
+
+
+.float-call, .whatsapp-float {
+    position: fixed;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+    text-decoration: none;
+    z-index: 999;
+}
+
+/* Call */
+.float-call {
+    bottom: 80px;
+    background: #1e88e5;
+}
+
+/* WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    
+}
+
+.whatsapp-float img {
+    width: 55px;
+    height: 55px;
+    border-radius: 55%;
+}
+/* =========================
+   PRODUCT LIST GRID
+========================= */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    gap: 25px;
+    padding: 30px;
+    max-width: 1100px;
+    margin: 0 auto; /* center container */
+}
+  
+/* =========================
+   PRODUCT CARD
+========================= */
+.product-card {
+    background: #f7f7fa;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Hover effect */
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   PRODUCT IMAGE
+========================= */
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* ❌ no crop */
+    margin-bottom: 10px;
+}
+
+/* =========================
+   PRODUCT TITLE
+========================= */
+.product-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222222;
+    margin: 0;
+}
+.order{
+    font-size: larger;
+    background-color: rgba(3, 247, 56, 0.671);
+    border-radius: 12px;
+    width: 100px;
+    margin-left: 95px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.upcm{
+    color: red;
+}
+.book{
+   font-size: larger;
+    background-color: rgba(101, 247, 3, 0.671);
+    border-radius: 12px;
+    width: 100px;
+    margin-left: 95px;
+    font-weight: 600;
+    margin-top: 10px; 
+}
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .product-list {
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    .product-card img {
+    width: 150px;
+        height: 150px;
+    }
+    .product-card{
+        width: 230px;
+        
+    }
+    .product-list{
+     text-align: center;
+     
+    }
+    .top-bar{
+        width: 550px;
+    }
+    .banner-wrapper{
+        width: 590px;
+    }
+    .upcoming-banner{
+        width: 590px;
+    }
+.upcoming-content{
+    width: 540px;
+}
+ .slider{
+    width: 560px;
+    padding-left: 30px;
+ }
+.order{
+    font-size: large;
+    display: block;
+    margin: 0 auto; 
+}
+.book{
+    display: block;
+    margin: 0 auto;
+    font-size: larger;
+}
+}
+.book{
+    font-size: large;
+    
+}

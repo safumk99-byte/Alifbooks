@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+
+<div class="card">
+    <h2>Order Details</h2>
+
+    <h3>Product Details</h3>
+    <img id="bookImage" class="book-img">
+
+    <p id="bookName"></p>
+    <p id="price"></p>
+    <p id="delivery"></p>
+    <p id="total" class="total"></p>
+
+    <h3>Delivery Address</h3>
+    <p id="name"></p>
+    <p id="address"></p>
+    <p id="landmark"></p>
+    <p id="phone"></p>
+    <p id="whatsapp"></p>
+    <p id="pincode"></p>
+    <div id="PaymentNote" class="note">
+            Please Take a Screenshort Of Your payment when 
+            You Pay  
+    </div>
+    <a id="whatsappBtn"
+    href="https://wa.me/9539505353"
+    target="_blank"
+    style="display: none;text-decoration: none;">
+    <button class="whatsapp-btn">
+        Share Your Screenshort
+    </button>
+</a>
+    <button onclick="changeAddress()">Change Address</button>
+    <button onclick="goToPayment();">Continue to Payment</button>
+</div>
+
+<script src="details.js"></script>
+</body>
+</html>

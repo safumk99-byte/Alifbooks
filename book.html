@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+
+<body>
+
+<div class="header">
+    <span class="back-btn" onclick="history.back()">← Back</span>
+    To Home
+</div>
+
+<div class="book-container">
+
+    <!-- BOOK IMAGES -->
+    <div id="bookImages" class="book-images"></div>
+
+    <!-- BOOK INFO -->
+    <h2 id="bookTitle" class="book-title"></h2>
+    <p id="bookDesc"></p>
+    
+
+    <!-- SAMPLE PDF -->
+     <button class="sample-btn" onclick="toggleSample()">Read Index</button>
+     <!-- ORDER SECTION -->
+<div class="order-section">
+
+    <!-- PRICE -->
+    <div class="book-price" id="bookPrice"></div>
+
+    <!-- QUANTITY -->
+     
+    <div class="qty-box">
+        <button onclick="decreaseQty()">−</button>
+        <span id="qty">1</span>
+        <button onclick="increaseQty()">+</button>
+    </div>
+
+    <!-- ORDER BUTTON -->
+    <button class="order-btn" onclick="goToCheckout()">
+        Order Now
+    </button>
+
+</div>
+
+
+    <h3 class="sample-title">Sample Reading</h3>
+    
+
+    <iframe id="bookPdf" class="pdf-viewer"></iframe>
+
+</div>
+
+<script src="book.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* Page background */
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+/* Main card */
+.card {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* PRODUCT BOX */
+.product-box {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* BOOK IMAGE */
+/* BOOK IMAGE ONLY */
+.book-img {
+    width: 120px;          /* 👈 image width */
+    height: auto;          /* aspect ratio correct */
+    display: block;        /* full width banner ഒഴിവാക്കാൻ */
+    margin: 10px 0;        /* top & bottom space */
+    object-fit: contain;   /* image cut ആവരുത് */
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #f7f7f7;
+    margin-left: 170px;
+}
+/* PRODUCT INFO */
+.product-info {
+    flex: 1;
+}
+
+.product-info h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.product-info p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #444;
+}
+
+/* PRICE HIGHLIGHT */
+.price {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* TOTAL */
+.total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1b5e20;
+    margin-top: 8px;
+}
+
+/* ADDRESS SECTION */
+.address {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #333;
+}
+
+.note {
+  background: #b33;
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 15px 0;
+  font-size: 14px;
+}
+.whatsapp-btn {
+  background: #25D366;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* BUTTONS */
+button {
+    width: 100%;
+    margin-top: 14px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fafdfb;
+    background: #2caa41;
+}
+
+#changeAddressBtn {
+    background: #02f02a;
+    color: #d9e0d8;
+    
+}
+
+#paymentBtn {
+    background: linear-gradient(90deg,#2e7d32,#43a047);
+    color: #3a05fa;
+}
+@media (max-width: 480px) {
+
+    .card {
+        margin: 0;
+        border-radius: 0;
+        min-height:  100vh;
+        padding-bottom: 90px; /* space for sticky button */
+        
+    }
+    .book-img{
+        margin-left: 110px;
+    }
+    .Notification{
+     height: 44px;   
+    }
+}
