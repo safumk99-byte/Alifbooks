@@ -2,10 +2,12 @@
     margin: 0;
     padding: 0;
 }
-body{
+html, body{
+    width: 100%;
     padding: 0;
     margin: 0;
     background: #28dbdb;
+    
 }
 /* TOP BAR */
 .top-bar {
@@ -106,7 +108,7 @@ body{
     padding: 25px;
     background: #03C03C;
     backdrop-filter: blur(6px);
-    width: 25%;
+    width: auto;
     margin: 0 auto;
     display: flex;
     margin-bottom: 150px;
@@ -115,10 +117,28 @@ body{
     
 }
 .upcoming-content {
-  bottom: 10%;
-  left: 8%;
-  z-index: 5;
-  color: rgb(226, 12, 12);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  background: #19c900;
+  padding: 10px 14px;
+  border-radius: 30px;
+
+  max-width: 90vw;        /* 🔥 MAIN FIX */
+  width: 35vw;    /* content മാത്രം */
+  box-sizing: border-box;
+  margin-top: 150px;
+}
+.upcoming-content span,
+.upcoming-content a {
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .upcoming-below{
     position: relative;
@@ -128,19 +148,19 @@ body{
     text-align: center;
 }
 .soon-text{
-    
-    font-size: 28px;
+    font-size: 40px;
     font-weight: bold;
-    color: #f3f5f8;
-    margin-bottom: 15px;
+    color: #fffdfd;
+    margin-bottom: 10px;
     text-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    padding-left: 12px;
 }
 .Book-now-btn {
   padding: 12px 30px;
-  margin-left: 15px;
+  margin-left: 10px;
   background: #F97316;
   color: #FFFFFF;
-  font-size: 18px;
+  font-size: 40px;
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
@@ -152,18 +172,38 @@ body{
     background: #ffc107;
     transform:  scale(1 .05);
 }
-@media (max-width: 600px) {
+
+  @media (max-width: 768px) {
+.upcoming-content {
+    left: 5%;
+    right: 5%;
+    transform: none;
+    bottom: 15%;
+    margin: auto;
+    justify-content: center;
+    padding: 8px 10px;
+    gap: px;
+    border-radius: 15px;
+    width: 60vw;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 15vw;
+    margin-bottom: 45px;
+    margin-right: 25px;
+ }
   .soon-text {
     font-size: 20px;
+    padding-top: 9px;
+    padding-right: 20px;
   }
-
-  .book-now-btn {
+.Book-now-btn {
     font-size: 20px;
-    padding: 10px 20px;
-    min-width: 140px;
-    
+    max-width: 20px;
+    padding-right: 95px;
   }
-}
+  }
 /* SLIDER */
 .slider{
     width: 60%;

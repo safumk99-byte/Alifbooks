@@ -3,8 +3,6 @@ const books = {
         title: "حاشية هداية المحتاج على شرح المنهاج",
         desc: "പണ്ഡിതർക്കും മുതഅല്ലിമീങ്ങൾക്കും ഒരു സന്തോഷ വാർത്ത ശാഫിഈ മദ്ഹബിലെ പ്രബല ഗ്രന്ഥം തുഹ്ഫത്തുൽ മുഹ്‌താജിന് പുതിയ ഹാശിയ. മുഖവില ₹700. ഫെബ്രുവരി 28 നു മുമ്പ് പണമടച്ച് ബുക്ക് ചെയ്യുന്നവർക്ക് ₹500. 2026 മാർച്ച് അവസാന വാരത്തിൽ പുറത്തിറങ്ങുന്നു കൊറിയർ ചാർജ്ജ് കോപ്പി ഒന്നിന് 100 രൂപ.",
 
-
-
         images: [
             "images/thufaicon.jpeg",
             
@@ -20,7 +18,7 @@ const books = {
             "images/kudumbam.icon.jpg"
         ],
         price: "₹ 700",
-        pdf: "pdf/jawhar2-sample.pdf"
+        pdf: "pdfs/kudumba kosham"
     },
     3: {
         title: "درر الفوائد",
@@ -29,7 +27,7 @@ const books = {
             "images/Durar.icon.jpg"
         ],
         price: "₹ 500",
-        pdf: "pdf/jawhar2-sample.pdf"
+        pdf: "pdfs/durar.pdf"
     },
 
     4: {
@@ -186,12 +184,13 @@ if (!id || !books[id]) {
         imgDiv.appendChild(image);
     });
 document.getElementById("bookPrice").innerText = book.price;
-    document.getElementById("bookPdf").src = book.pdf;
+    document.getElementById("bookPdf").src = "https://docs.google.com/gview?embedded=true&url=" +
+  window.location.origin + "/" + book.pdf;
 }
 
 function toggleSample() {
     const pdf =
-    document.getElementById("bookpdf");
+    document.getElementById("bookPdf");
 if    (pdf.style.display ==="none"){
     pdf.style.display = "block";
 }else {
