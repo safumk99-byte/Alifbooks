@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Reader</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<iframe id="readerFrame"></iframe>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const pdf = params.get("pdf");
+
+  document.getElementById("readerFrame").src =
+    "https://docs.google.com/gview?embedded=true&url=" +
+    window.location.origin + "/" + pdf;
+</script>
+
+</body>
+</html>

@@ -192,15 +192,17 @@ document.getElementById("bookPdf").src =
   window.location.origin + basePath + book.pdf;
 }
 
-function toggleSample() {
-    const pdf =
-    document.getElementById("bookPdf");
-if    (pdf.style.display ==="none"){
-    pdf.style.display = "block";
-}else {
-    pdf.style.display ="none";
-}
-    
+function readFull() {
+  const id = new URLSearchParams(window.location.search).get("id");
+  const book = books[id];
+
+  const basePath = window.location.pathname.replace("book.html", "");
+
+  const pdfUrl =
+    "https://docs.google.com/gview?embedded=true&url=" +
+    window.location.origin + basePath + book.pdf;
+
+  window.open(pdfUrl, "_blank");
 }
 
 // 🔥 GLOBAL QUANTITY
