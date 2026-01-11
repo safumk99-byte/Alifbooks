@@ -184,8 +184,12 @@ if (!id || !books[id]) {
         imgDiv.appendChild(image);
     });
 document.getElementById("bookPrice").innerText = book.price;
-    document.getElementById("bookPdf").src = "https://docs.google.com/gview?embedded=true&url=" +
-  window.location.origin + "/" + book.pdf;
+
+    const basePath = window.location.pathname.replace("book.html", "");
+
+document.getElementById("bookPdf").src =
+  "https://docs.google.com/gview?embedded=true&url=" +
+  window.location.origin + basePath + book.pdf;
 }
 
 function toggleSample() {
