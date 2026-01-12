@@ -18,7 +18,7 @@ const books = {
             "images/kudumbam.icon.jpg"
         ],
         price: "₹ 700",
-        pdf: "pdfs/kudumba kosham"
+        pdf: "pdfs/kudumba kosham .pdf"
     },
     3: {
         title: "درر الفوائد",
@@ -152,7 +152,7 @@ const books = {
             
         ],
         price: "₹ 2600",
-        pdf: "pdf/jawhar1-sample.pdf"
+        pdf: "pdfs/kosham index.pdf"
     },
 };
 

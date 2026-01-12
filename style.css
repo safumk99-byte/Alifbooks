@@ -233,6 +233,7 @@ html, body{
     overflow: hidden;
     margin: 0 auto;
     border-radius: 12px;
+    margin-top: 15px;
 }
 
 /* SLIDE IMAGE */
