@@ -168,6 +168,7 @@
         <p class="order">Order Now</p>
     </div>
 </div>
+<button id="installBtn" style="display: none;">Install App</button>
  
 
 </body>
@@ -193,6 +194,25 @@ setInterval(showSlide, 3000); // 3 seconds
  if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("sw.js");
        }  
+
+       let deferredPrompt;
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+
+  const btn = document.getElementById("installBtn");
+  btn.style.display = "block";
+
+  btn.addEventListener("click", () => {
+    btn.style.display = "none";
+    deferredPrompt.prompt();
+
+    deferredPrompt.userChoice.then(() => {
+      deferredPrompt = null;
+    });
+  });
+});
 </script>
 </body>
 </html> 
