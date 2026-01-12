@@ -16,7 +16,7 @@ html, body{
     justify-content: space-between; /* left & right */
     align-items: center;
     padding: 10px 20px;
-    background-color: #1f2a7a;   /* blue */
+    background-color: #44a0a3;   /* blue */
 }
 .splash{
     width: 150px;
@@ -31,6 +31,8 @@ html, body{
 .logo img {
     height: 40px;
     background-color: white;
+    border-radius: 10px;
+    
 }
 
 /* LOGIN */
@@ -216,10 +218,12 @@ html, body{
     }
     .slider{
         width: 100%;
+        margin-top: 15px;
     }
     .info-box{
         width: 100%;
     }
+    
 }
 
 /* =====================
@@ -350,6 +354,15 @@ a {
     margin-left: 95px;
     font-weight: 600;
     margin-top: 10px;
+}
+.orderr{
+    font-size: larger;
+    background-color: rgba(3, 247, 56, 0.671);
+    border-radius: 12px;
+    width: 100px;
+    margin-left: 65px;
+    font-weight: 600;
+    margin-top: 25px;
 }
 .upcm{
     color: red;
