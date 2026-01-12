@@ -192,7 +192,9 @@ setInterval(showSlide, 3000); // 3 seconds
     window.location.href = "book.html?id=" + id;
 }  
  if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("sw.js");
+        navigator.serviceWorker.register("./sw.js").then(reg =>{
+            console.log("SW registered");
+        });
        }  
 
        let deferredPrompt;

@@ -2,7 +2,7 @@
   "name": "Alif Books",
   "short_name": "AlifBooks",
   "description": "Islamic Digital Books Reading App",
-  "start_url": "index.html",
+  "start_url": "./home.html",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
