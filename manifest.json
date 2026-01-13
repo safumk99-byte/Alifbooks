@@ -1,10 +1,7 @@
 {
-  "id": "/Alifbooks/",
   "name": "Alif Books",
   "short_name": "AlifBooks",
-  "description": "Islamic Digital Books Reading App",
-  "start_url": "/Alifbooks/home.html",
-  "scope": "Alifbooks/",
+  "start_url": "/Alifbooks/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#0d6efd",

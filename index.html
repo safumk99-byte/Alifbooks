@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Alif Books</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0d6efd">
+    <meta http-equiv="refresh" content="0; url=home.html">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,7 +18,11 @@
         setTimeout(function () {
             window.location.href = "home.html";
         }, 2000);
-
+ if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js")
+    .then(() => console.log("SW registered"))
+    .catch(err => console.log("SW error", err));
+}
        
 </script>
 
