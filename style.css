@@ -1,7 +1,9 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
+
 html, body{
     width: 100%;
     padding: 0;
@@ -9,9 +11,10 @@ html, body{
     background: #28dbdb;
     
 }
+
 /* TOP BAR */
 .top-bar {
-    width:auto;
+    width:100%;
     display: flex;
     justify-content: space-between; /* left & right */
     align-items: center;
@@ -21,8 +24,9 @@ html, body{
 .splash{
     width: 150px;
     height: 150px;
-    margin-top: 100px;
-    margin-left: 450px;
+    margin: 100px auto 0;
+    display: flex;
+   
 }
 .splash-logo{
   display: flex;  
@@ -306,12 +310,14 @@ a {
     padding: 30px;
     max-width: 1100px;
     margin: 0 auto; /* center container */
+    
 }
   
 /* =========================
    PRODUCT CARD
 ========================= */
 .product-card {
+    
     background: #f7f7fa;
     border-radius: 15px;
     padding: 15px;
@@ -340,7 +346,7 @@ a {
 /* =========================
    PRODUCT TITLE
 ========================= */
-.product-card h4 {
+.product-card h4  {
     font-size: 16px;
     font-weight: 600;
     color: #222222;
@@ -355,15 +361,7 @@ a {
     font-weight: 600;
     margin-top: 10px;
 }
-.orderr{
-    font-size: larger;
-    background-color: rgba(3, 247, 56, 0.671);
-    border-radius: 12px;
-    width: 100px;
-    margin-left: 65px;
-    font-weight: 600;
-    margin-top: 25px;
-}
+
 .upcm{
     color: red;
 }
@@ -436,3 +434,13 @@ a {
     font-size: large;
     
 }
+h4{
+    text-align: center;
+    color: red;
+    
+}
+.off{
+  margin-top: auto;  
+  font-weight: bold;
+}
+

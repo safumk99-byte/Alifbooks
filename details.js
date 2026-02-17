@@ -8,8 +8,7 @@ if (!data) {
 // price & qty
 const price = Number(data.price);
 const qty = Number(data.quantity);
-const deliveryCharge = 45;
-const total = (price * qty) + deliveryCharge;
+const total = (price * qty) ;
 
 // product
 document.getElementById("bookImage").src = data.image;
@@ -17,10 +16,7 @@ document.getElementById("bookName").innerText =
     data.bookName + " (x" + qty + ")";
 
 document.getElementById("price").innerText =
-    "Price : ₹" + price + " × " + qty;
-
-document.getElementById("delivery").innerText =
-    "Delivery Charge : ₹" + deliveryCharge;
+    "Price : ₹ " + price + " × " + qty;
 
 document.getElementById("total").innerText =
     "Total : ₹" + total;
@@ -47,7 +43,7 @@ function goToPayment() {
         return;
     }
 
-    const amount = (Number(data.price) * Number(data.quantity)) + 45;
+    
 
     // save total
     data.total = amount;
