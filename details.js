@@ -44,13 +44,13 @@ function goToPayment() {
     }
 
     
-
+        const amount = (Number(data.price) * Number(data.quantity))
     // save total
     data.total = amount;
 
     // 🔹 Google Apps Script URL
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbxqH3cQk8re832hgCJUaE-tMMcDzKqpDe8zMNdDedSQ_yhLWOVbluwsyiawNyZMlbbW/exec";
+      "https://script.google.com/macros/s/AKfycbzOurowKoyzlLl6WEBH_zLTaTZUmvyH-ot4oAY9xx1EXhF2V-9j3ZU5KC66IaxH-OEQ/exec";
 
     // 🔹 Save order → Sheet + Email
     fetch(scriptURL, {
