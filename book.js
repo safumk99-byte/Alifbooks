@@ -17,7 +17,7 @@ const books = {
         images: [
             "images/kudumbam.icon.jpg"
         ],
-        price: " 700",
+        price: " 560",
         pdf: "pdfs/kudumba kosham .pdf"
     },
     3: {
@@ -26,7 +26,7 @@ const books = {
         images: [
             "images/Durar.icon.jpg"
         ],
-        price: " 500",
+        price: " 400",
         pdf: "pdfs/durar.pdf"
     },
 
@@ -36,7 +36,7 @@ const books = {
         images: [
             "images/qali.icon.jpg"
         ],
-        price: " 150",
+        price: " 120",
         pdf: "pdf/jawhar2-sample.pdf"
     },
 
@@ -46,7 +46,7 @@ const books = {
         images: [
             "images/quraan.icon.jpg"
         ],
-        price: " 650",
+        price: " 520",
         pdf: "pdf/jawhar2-sample.pdf"
     },
 
@@ -56,7 +56,7 @@ const books = {
         images: [
             "images/thaqreeb.icon.jpg"
         ],
-        price: " 180",
+        price: " 140",
         pdf: "pdf/jawhar2-sample.pdf"
     },
 
@@ -66,7 +66,7 @@ const books = {
         images: [
             "images/mulla.icon.jpg"
         ],
-        price: " 200",
+        price: " 160",
         pdf: "pdf/jawhar2-sample.pdf"
     },
 
@@ -76,7 +76,7 @@ const books = {
         images: [
             "images/muslim.icon.jpg"
         ],
-        price: " 90",
+        price: " 70",
         pdf: "pdf/jawhar2-sample.pdf"
     },
 
@@ -86,7 +86,7 @@ const books = {
         images: [
             "images/karma.icon.jpg"
         ],
-        price: " 70",
+        price: " 50",
         pdf: "pdf/jawhar2-sample.pdf"
     },
 
@@ -96,7 +96,7 @@ const books = {
         images: [
             "images/vivahikam.icon.jpg"
         ],
-        price: " 50",
+        price: " 40",
         pdf: "pdf/jawhar2-sample.pdf"
     },
 
@@ -106,7 +106,7 @@ const books = {
         images: [
             "images/falak.icon.jpg"
         ],
-        price: " 180",
+        price: " 140",
         pdf: "pdf/jawhar2-sample.pdf"
     },
 
@@ -116,7 +116,7 @@ const books = {
         images: [
             "images/mantiq.icon.jpg"
         ],
-        price: " 80",
+        price: " 60",
         pdf: "pdf/jawhar2-sample.pdf"
     },
 
@@ -126,7 +126,7 @@ const books = {
         images: [
             "images/fiqhusunna.icon.jpg"
         ],
-        price: " 600",
+        price: " 480",
         pdf: "pdf/jawhar2-sample.pdf"
     },
     14: {
@@ -136,7 +136,7 @@ const books = {
             "images/minhaj.icon.jpg",
             
         ],
-        price: " 180",
+        price: " 140",
         pdf: "pdf/jawhar1-sample.pdf"
     },
     15: {
@@ -151,7 +151,7 @@ const books = {
             "images/kosham 3.jpg",
             
         ],
-        price: " 2600",
+        price: " 3360",
         pdf: "pdfs/kosham index.pdf"
     },
 };

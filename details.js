@@ -50,7 +50,7 @@ function goToPayment() {
 
     // 🔹 Google Apps Script URL
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbyHTqSKSbeeT8otqj_3Yhk2wFPjI1mRKokc0lImwccR_9DSic5AfxuSG9b9ykSS1F2R/exec";
+      "https://script.google.com/macros/s/AKfycbxqH3cQk8re832hgCJUaE-tMMcDzKqpDe8zMNdDedSQ_yhLWOVbluwsyiawNyZMlbbW/exec";
 
     // 🔹 Save order → Sheet + Email
     fetch(scriptURL, {
@@ -65,7 +65,7 @@ function goToPayment() {
         localStorage.setItem("paymentInitiated", "yes");
 
         // 🔹 UPI DETAILS
-        const upiId = "safumk99@okhdfcbank";
+        const upiId = "alifpoongod-2@okhdfcbank";
         const payeeName = "Alif Books";
         const note = "Book Purchase";
 

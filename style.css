@@ -354,12 +354,14 @@ a {
 }
 .order{
     font-size: larger;
-    background-color: rgba(3, 247, 56, 0.671);
-    border-radius: 12px;
+    background-color: rgba(6, 241, 57, 0.671);
+    border-radius: 10px;
     width: 100px;
+    height: 30px;
     margin-left: 95px;
     font-weight: 600;
     margin-top: 10px;
+    padding-top: 7px;
 }
 
 .upcm{
@@ -436,11 +438,30 @@ a {
 }
 h4{
     text-align: center;
-    color: red;
+    color: rgb(55, 0, 255);
     
 }
-.off{
-  margin-top: auto;  
-  font-weight: bold;
-}
+
+
+.old-price {
+      color: #777;
+      text-decoration: line-through;
+      margin-right: 10px;
+      font-size: 30px;
+    }
+
+    .new-price {
+      color: #d32f2f;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .off-tag {
+      background: green;
+      color: #fff;
+      font-size: 12px;
+      padding: 3px 6px;
+      border-radius: 4px;
+      margin-left: 8px;
+    }
 
