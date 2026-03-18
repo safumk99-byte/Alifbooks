@@ -90,7 +90,7 @@ window.onload = function () {
 
   if (paymentDone === "yes") {
     // hide red note
-    document.getElementById("paymentNote").style.display = "none";
+    document.getElementById("PaymentNote ").style.display = "none";
 
     // show whatsapp button
     document.getElementById("whatsappBtn").style.display = "block";

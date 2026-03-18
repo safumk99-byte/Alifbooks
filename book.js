@@ -7,7 +7,7 @@ const books = {
             "images/thufaicon.jpeg",
             
         ],
-        price: "500",
+        price: "600",
         pdf: "pdf/jawhar1-sample.pdf"
     },
 

@@ -363,6 +363,10 @@ a {
     font-weight: 600;
     margin-top: 10px;
     padding-top: 7px;
+
+}
+.product-card p {
+   margin-top: 20px; 
 }
 
 .upcm{
