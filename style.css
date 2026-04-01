@@ -290,6 +290,7 @@ a {
     object-fit: contain; /* ❌ no crop */
     margin-bottom: 10px;
     padding-left: 30px;
+    border-radius: 12px;
 }
 
 /* =========================
@@ -316,9 +317,7 @@ a {
    margin-top: 20px; 
 }
 
-.upcm{
-    color: red;
-}
+
 .book{
    font-size: larger;
     background-color: rgba(101, 247, 3, 0.671);
