@@ -10,33 +10,26 @@
     
 </head>
 <body>
-    <div class="top-bar">
-
-    <!-- Left : Logo -->
-    <div class="logo">
-        <img src="images/logo png.png" alt="Alif Books">
-    </div>
-<h1 class="name">Alif Books</h1>
-    <!-- Right : Login -->
-    <div class="login">
-        <a href="login.html">Login</a>
-    </div>
-
-
-</div>
+    
 
 
 <div class="banner-wrapper">
+
 
     <div class="banner left-banner">
         <img src="images/buy.jpeg">
         
     </div>
 
+    
     <div class="banner right-banner">
         <img src="images/father 2.jpeg">
     </div>
 
+    <div class="logo">
+        <img src="images/logo png.png" alt="Alif Books">
+    </div>
+<h1 class="name">Alif Books</h1>
 </div>
 
      
@@ -44,19 +37,19 @@
     
 <!-- SLIDER -->
 <div class="slider">
-    <img src="images/fiq.land.jpeg" class="slide active">
+    <img src="images/fiqh.land.jpeg" class="slide active">
     <img src="images/qali.land.jpeg" class="slide">
     <img src="images/minhaj.land.jpeg" class="slide">
-    <img src="images/vivaahikam.land.jpeg" class="slide">
+    <img src="images/vivahikam.land.jpeg" class="slide">
     <img src="images/thaqreeb.land.jpeg" class="slide">
-    <img src="images/mulla.land.jpeg" class="slide">
+    <img src="images/mullahasan.land.jpeg" class="slide">
     <img src="images/muslim.land.jpeg" class="slide">
     <img src="images/karma.land.jpeg" class="slide">
     <img src="images/kosham.land.jpeg" class="slide">
     <img src="images/kudumbam.land.jpeg" class="slide">
     <img src="images/durar.land.jpeg" class="slide">
-    <img src="images/quraan.land.jpeg" class="slide">
-    <img src="images/falak.land.jpeg" class="slide">
+    <img src="images/thafseer.land.jpeg" class="slide">
+    <img src="images/falk.land.jpeg" class="slide">
 </div>
 
 
@@ -69,18 +62,25 @@
     <img src="images/Whatsapp_Logo_png-removebg-preview.png" alt="WhatsApp">
 </a>
 
+  <div class="tabs">
+    <button class="tab active" onclick="filterBooks('all',event)">All</button>
+    <button class="tab active" onclick="filterBooks('malayalam',event)
+    ">Malayalam</button>
+    <button class="tab active" onclick="filterBooks('arabic',event)">Arabic</button>
+  </div>
+
 <div class="product-list">
 
-    <div class="product-card" onclick="openBook(1)">
-        <img class="icon" src="images/thufaicon.jpeg">
-        <h2>  حاشية هداية المحتاج<br> على شرح المنهاج  </h2>
-      <h1 class="upcm">Upcoming</h1>
-        <p class="book">Book Now</p>
+    <div class="product-card" data-category="arabic" onclick="openBook(1)">
+        
+        <img class="icon" src="images/hidaya-icon.jpeg">
+        <h2><br> هداية المحتاج حاشية تحفة المحتاجج  </h2>
+        <p class="book">Order Now</p>
         <span class="old-price">800</span>
         <span class="new-price" id="price1">600</span>
     </div>
 
-    <div class="product-card" onclick="openBook(2)">
+    <div class="product-card" data-category="malayalam" onclick="openBook(2)">
         <img class="icon" src="images/kudumbam.icon.jpg">
         <h2>കുടുംബ<br> കോശം</h4>
         <p class="order">Order Now</p>
@@ -89,7 +89,7 @@
         
     </div>
 
-    <div class="product-card" onclick="openBook(3)">
+    <div class="product-card" data-category="arabic" onclick="openBook(3)">
         <img class="icon" src="images/Durar.icon.jpg">
         <h2>درر الفوائد <br>حاشية شرح العقائد</h2>
         <p class="order">Order Now</p>
@@ -98,7 +98,7 @@
         
     </div>
 
-    <div class="product-card" onclick="openBook(4)">
+    <div class="product-card" data-category="arabic" onclick="openBook(4)">
         <img class="icon" src="images/qali.icon.jpg">
         <h2>تحفة القاري<br> شرح مقدمة القاضي</h2>
         <p class="order">Order Now</p>
@@ -107,7 +107,7 @@
         
     </div>
 
-    <div class="product-card" onclick="openBook(5)">
+    <div class="product-card" data-category="arabic" onclick="openBook(5)">
         <img class="icon" src="images/quraan.icon.jpg">
         <h2>جوهر البيان<br> في تفسير القرآن</h2>
         <p class="order">Order Now</p>
@@ -116,7 +116,7 @@
         
     </div>
 
-    <div class="product-card" onclick="openBook(6)">
+    <div class="product-card" data-category="arabic" onclick="openBook(6)">
         <img class="icon" src="images/thaqreeb.icon.jpg">
         <h2>التقريب إلى تسهيل<br> شرح التهذيب</h2>
         <p class="order">Order Now</p>
@@ -125,7 +125,7 @@
         
     </div>
 
-    <div class="product-card" onclick="openBook(7)">
+    <div class="product-card" data-category="arabic" onclick="openBook(7)">
         <img class="icon" src="images/mulla.icon.jpg">
         <h2>التحرير الحسن<br> حاشية ملا حسن</h2>
         <p class="order">Order Now</p>
@@ -134,7 +134,7 @@
         
     </div>
 
-    <div class="product-card" onclick="openBook(8)">
+    <div class="product-card" data-category="malayalam" onclick="openBook(8)">
         <img class="icon" src="images/muslim.icon.jpg">
         <h3> മുസ്ലിം സ്ത്രീക്ക് <br>ഒരു മാർഗ്ഗദർശി</h3>
         <p class="order">Order Now</p>
@@ -143,7 +143,7 @@
         
     </div>
 
-    <div class="product-card" onclick="openBook(9)">
+    <div class="product-card" data-category="malayalam" onclick="openBook(9)">
         <img class="icon" src="images/karma.icon.jpg">
         <h2>കർമ <br>സരണി</h4>
         <p class="order">Order Now</p>
@@ -152,7 +152,7 @@
 
     </div>
 
-    <div class="product-card" onclick="openBook(10)">
+    <div class="product-card" data-category="malayalam" onclick="openBook(10)">
         <img class="icon" src="images/vivahikam.icon.jpg">
         <h3>  വൈവാഹിക ജീവിതം യുവാക്കൾക്ക് ഒരു വഴികാട്ടി</h3>
         <p class="order">Order Now</p>
@@ -160,7 +160,7 @@
         <span class="new-price" id="price">40</span>
     </div>
 
-    <div class="product-card" onclick="openBook(11)">
+    <div class="product-card" data-category="arabic" onclick="openBook(11)">
         <img class="icon" src="images/falak.icon.jpg">
         <h2>المنهج السديد<br> إلى الفلك الجديد</h2>
         <p class="order">Order Now</p>
@@ -169,7 +169,7 @@
        
     </div>
 
-    <div class="product-card" onclick="openBook(12)">
+    <div class="product-card" data-category="arabic" onclick="openBook(12)">
         <img class="icon" src="images/mantiq.icon.jpg">
         <h2>  تصريح المنطق<br> مع الشرح وجديد المنطق</h2>
         <p class="order">Order Now</p>
@@ -178,7 +178,7 @@
         
     </div>
 
-    <div class="product-card" onclick="openBook(13)">
+    <div class="product-card" data-category="arabic" onclick="openBook(13)">
         <img class="icon" src="images/fiqhusunna.icon.jpg">
         <h2>فقه <br>السنة</h2>
         <p class="order">Order Now</p>
@@ -187,7 +187,7 @@
        
     </div>
 
-    <div class="product-card" onclick="openBook(14)">
+    <div class="product-card" data-category="arabic" onclick="openBook(14)">
         <img class="icon" src="images/minhaj.icon.jpg">
         <h2>منهاج أهل السنة والجماعة في ضوء القرآن والسنة</h2>
         <p class="order">Order Now</p>
@@ -196,7 +196,7 @@
         
     </div>
 
-     <div class="product-card" onclick="openBook(15)">
+     <div class="product-card" data-category="malayalam" onclick="openBook(15)">
         <img class="icon" src="images/kosham1.png">
         <h2>ഇസ്ലാമിക വിശ്വാസ കോശം 1-7</h2>
         <p class="order">Order Now</p>
@@ -253,7 +253,7 @@ window.addEventListener("beforeinstallprompt", (e) => {
 });
 
 </script>
-
+<script src="home.js"></script>
 
 
 </body>
