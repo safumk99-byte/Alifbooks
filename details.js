@@ -35,24 +35,25 @@ function changeAddress() {
 
 
 
-function goToPayment() {
+const scriptURL =
+"https://script.google.com/macros/s/AKfycbzOurowKoyzlLl6WEBH_zLTaTZUmvyH-ot4oAY9xx1EXhF2V-9j3ZU5KC66IaxH-OEQ/exec";
+
+function confirmOrder() {
+    const btn = document.getElementById("confirmBtn");
+
+    btn.disabled = true;
+    btn.innerText = "Confirming...";
+
     const data = JSON.parse(localStorage.getItem("orderData"));
 
     if (!data) {
-        alert("Order data missing");
+        alert("Order data missing.");
         return;
     }
 
-    
-        const amount = (Number(data.price) * Number(data.quantity))
-    // save total
-    data.total = amount;
+    // Total ചേർക്കുക
+    data.total = Number(data.price) * Number(data.quantity);
 
-    // 🔹 Google Apps Script URL
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycbzOurowKoyzlLl6WEBH_zLTaTZUmvyH-ot4oAY9xx1EXhF2V-9j3ZU5KC66IaxH-OEQ/exec";
-
-    // 🔹 Save order → Sheet + Email
     fetch(scriptURL, {
         method: "POST",
         body: JSON.stringify(data)
@@ -60,40 +61,21 @@ function goToPayment() {
     .then(res => res.json())
     .then(response => {
 
-        console.log("Order saved", response);
+        console.log("Order Saved", response);
 
-        localStorage.setItem("paymentInitiated", "yes");
+        alert(
+            "Your order has been confirmed successfully.\n\nOur team will contact you shortly to complete your order.\n\nThank you for choosing Alif Books."
+        );
 
-        // 🔹 UPI DETAILS
-        const upiId = "alifpoongod-2@okhdfcbank";
-        const payeeName = "Alif Books";
-        const note = "Book Purchase";
+        localStorage.removeItem("orderData");
 
-        const upiUrl =
-            `upi://pay?pa=${upiId}` +
-            `&pn=${encodeURIComponent(payeeName)}` +
-            `&am=${amount}` +
-            `&cu=INR` +
-            `&tn=${encodeURIComponent(note)}`;
-
-        // 🔹 Redirect to Google Pay
-        window.location.href = upiUrl;
+        window.location.href = "home.html";
     })
-    .catch(err => {
-        console.error(err);
-        alert("Order save failed. Try again.");
+    .catch(error => {
+        console.error(error);
+        btn.disabled = false;
+        btn.innerText = "Confirm Order";
+        alert("Failed to confirm your order. Please try again.");
     });
+
 }
-window.onload = function () {
-
-  const paymentDone = localStorage.getItem("paymentInitiated");
-
-  if (paymentDone === "yes") {
-    // hide red note
-    document.getElementById("PaymentNote ").style.display = "none";
-
-    // show whatsapp button
-    document.getElementById("whatsappBtn").style.display = "block";
-  }
-
-};
